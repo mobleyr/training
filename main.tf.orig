@@ -1,0 +1,29 @@
+#
+# DO NOT DELETE THESE LINES!
+#
+# Your AMI ID is:
+#
+#     ami-eea9f38e
+#
+# Your subnet ID is:
+#
+#     subnet-7e08481a
+#
+# Your security group ID is:
+#
+#     sg-834d35e4
+#
+# Your Identity is:
+#
+#     autodesk-pony
+#
+
+provider "aws" {
+  access_key = "AKIAIFGMEWIRSWWCQLSA"
+  secret_key = "pVb2HdjtleImT/uRAuUkhXumR1+hU4vPypHnLtOI"
+  region     = "us-west-1"
+}
+
+resource "aws_instance" "web" {
+  # ...
+}

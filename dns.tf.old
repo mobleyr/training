@@ -1,0 +1,16 @@
+provider "dnsimple" {
+  token   = "token"
+  account = "account"
+}
+
+resource "dnsimple_record" "www" {
+  domain = "muscle.com"
+  type = "A"
+  name = "rainbow"
+  #value = "${aws_instance.web.0.public_ip}"
+
+  # Alternative use 'element' function:
+  # value = "${element(aws_instance.web.*.public_ip, 0)}"
+  value = "${element(aws_instance.web.*.public_ip, count.index)}"
+}
+
