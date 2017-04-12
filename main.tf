@@ -79,3 +79,5 @@ terraform {
     name = "mobleyr/training"
   }
 }
+
+syntax error here {}
