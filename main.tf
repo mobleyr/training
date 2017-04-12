@@ -53,8 +53,9 @@ resource "aws_instance" "web" {
   count         = "${var.aws_count}"
 
   subnet_id              = "subnet-7e08481a"
-  vpc_security_group_ids = ["sg-834d35e4"]
-
+#  vpc_security_group_ids = ["sg-834d35e4"]
+  vpc_security_group_ids = ["sg-834d35e41"]
+  
   tags {
     "Identity" = "autodesk-pony"
     "Name"     = "rainbow ${count.index + 1} of ${var.aws_count}"
