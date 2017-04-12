@@ -33,7 +33,7 @@ variable "aws_secret_key" {
 
 variable "aws_count" {
   type    = "string"
-  default = "2"
+  default = "3"
 }
 
 variable "aws_region" {
